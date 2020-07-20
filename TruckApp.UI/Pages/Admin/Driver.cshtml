@@ -1,0 +1,50 @@
+﻿@page
+@model TruckApp.UI.Pages.Admin.DriverModel
+@{
+}
+
+    <div id="app">
+        <div>
+            <p v-for="(driver, index) in drivers">
+                {{driver.firstName}} - {{driver.lastName}} - {{driver.email}} - {{driver.description}}
+                <a @@click="editDriver(driver.id, index)">Edit</a>
+                <a @@click="deleteDriver(driver.id, index)">Remove</a>
+            </p>
+        </div>
+
+        <div>
+            <input v-model="driverModel.firstName" />
+            <input v-model="driverModel.lastName" />
+            <input v-model="driverModel.email" />
+            <input v-model="driverModel.phone1" />
+            <input v-model="driverModel.address1" />
+            <input v-model="driverModel.city" />
+            <input v-model="driverModel.state" />
+            <input v-model="driverModel.zipCode" />
+            <input v-model="driverModel.description" />
+
+            <input v-model.number="driverModel.rate" type="number" />
+            <input v-model="driverModel.corpName" />
+            <input v-model="driverModel.ein" />
+
+            <input v-model="driverModel.ss" />
+            <input v-model="driverModel.dob" />
+            <input v-model="driverModel.cdlClass" />
+            <input v-model="driverModel.cdlIssued" />
+            <input v-model="driverModel.cdlExpires" />
+            <input v-model="driverModel.cdlState" />
+
+            <input v-model="driverModel.status" />
+
+            <button @@click="createDriver" v-if="!driverModel.id">Create Driver</button>
+            <button @@click="updateDriver" v-else>Update Driver</button>
+        </div>
+    </div>
+
+
+@section scripts{
+    @*<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>*@
+    @*<script src="https://unpkg.com/axios/dist/axios.min.js"></script>*@
+
+    <script src="~/js/admin/drivers.js"></script>
+}

@@ -1,0 +1,40 @@
+﻿@page
+@model TruckApp.UI.Pages.Admin.BrokerModel
+@{
+}
+
+    <div id="app">
+        <div>
+            <p v-for="(broker, index) in brokers">
+                {{broker.brokerName}} - {{broker.email}} - {{broker.created}}
+                <a @@click="editBroker(broker.id, index)">Edit</a>
+                <a @@click="deleteBroker(broker.id, index)">Remove</a>
+            </p>
+        </div>
+
+        <div>
+            <input v-model="brokerModel.brokerName" />
+            <input v-model="brokerModel.email" />
+            <input v-model="brokerModel.phone1" />
+            <input v-model="brokerModel.address1" />
+            <input v-model="brokerModel.city" />
+            <input v-model="brokerModel.state" />
+            <input v-model="brokerModel.zipCode" />
+            <input v-model="brokerModel.description" />
+            <input v-model="brokerModel.status" />
+
+            <button @@click="createBroker" v-if="!brokerModel.id">Create Broker</button>
+            <button @@click="updateBroker" v-else>Update Broker</button>
+        </div>
+    </div>
+
+
+
+@section scripts{
+    @*<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>*@
+    @*<script src="~/js/vue/vue.js"></script>*@
+    @*<script src="https://unpkg.com/axios/dist/axios.min.js"></script>*@
+    @*<script src="~/js/axios/axios.js"></script>*@
+
+    <script src="~/js/admin/brokers.js"></script>
+}

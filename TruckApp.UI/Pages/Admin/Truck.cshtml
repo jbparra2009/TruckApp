@@ -1,0 +1,50 @@
+﻿@page
+@model TruckApp.UI.Pages.Admin.TruckModel
+@{
+}
+
+    <div id="app">
+        <div>
+            <p v-for="(truck, index) in trucks">
+                {{truck.truckNumber}} - {{truck.truckPlate}} - {{truck.purchaseDate}} - ${{truck.purchasePrice}}
+                <a @@click="editTruck(truck.id, index)">Edit</a>
+                <a @@click="deleteTruck(truck.id, index)">Remove</a>
+            </p>
+        </div>
+
+        <div>
+            <input v-model="truckModel.vin" />
+            <input v-model="truckModel.year" />
+            <input v-model="truckModel.make" />
+            <input v-model="truckModel.type" />
+            <input v-model="truckModel.class" />
+            <input v-model="truckModel.bodyType" />
+            <input v-model="truckModel.lenght" />
+            <input v-model="truckModel.description" />
+
+            <input v-model="truckModel.truckPlate" />
+            <input v-model="truckModel.truckNumber" />
+
+            <input v-model="truckModel.registrantName" />
+            <input v-model="truckModel.titleState" />
+            <input v-model="truckModel.ownerLessorName" />
+            <input v-model="truckModel.expiresDate" />
+            <input v-model="truckModel.efectiveDate" />
+            <input v-model="truckModel.issueDate" />
+            <input v-model.number="truckModel.purchasePrice" />
+            <input v-model="truckModel.purchaseDate" />
+
+            <input v-model="truckModel.status" />
+
+            <button @@click="createTruck" v-if="!truckModel.id">Create Truck</button>
+            <button @@click="updateTruck" v-else>Update Truck</button>
+        </div>
+    </div>
+
+
+@section scripts{
+    @*<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>*@
+    @*<script src="https://unpkg.com/axios/dist/axios.min.js"></script>*@
+
+    <script src="~/js/admin/trucks.js"></script>
+}

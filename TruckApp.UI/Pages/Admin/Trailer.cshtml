@@ -1,0 +1,45 @@
+﻿@page
+@model TruckApp.UI.Pages.Admin.TrailerModel
+@{
+}
+
+    <div id="app">
+        <div>
+            <p v-for="(trailer, index) in trailers">
+                {{trailer.trailerNumber}} - {{trailer.trailerPlate}} - {{trailer.description}} - {{trailer.purchaseDate}} - {{trailer.purchasePrice}}
+                <a @@click="editTrailer(trailer.id, index)">Edit</a>
+                <a @@click="deleteTrailer(trailer.id, index)">Remove</a>
+            </p>
+        </div>
+
+        <div>
+            <input v-model="trailerModel.vin" />
+            <input v-model="trailerModel.year" />
+            <input v-model="trailerModel.make" />
+            <input v-model="trailerModel.model" />
+            <input v-model="trailerModel.class" />
+            <input v-model="trailerModel.bodyType" />
+            <input v-model="trailerModel.lenght" />
+            <input v-model="trailerModel.description" />
+            <input v-model="trailerModel.trailerPlate" />
+            <input v-model="trailerModel.trailerNumber" />
+            <input v-model="trailerModel.titleNumber" />
+            <input v-model="trailerModel.titleState" />
+            <input v-model="trailerModel.titleIssueDate" />
+            <input v-model.number="trailerModel.purchasePrice" />
+            <input v-model="trailerModel.purchaseDate" />
+            <input v-model="trailerModel.status" />
+
+            <button @@click="createTrailer" v-if="!trailerModel.id">Create Trailer</button>
+            <button @@click="updateTrailer" v-else>Update Trailer</button>
+        </div>
+    </div>
+
+
+@section scripts{
+    @*<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>*@
+    @*<script src="https://unpkg.com/axios/dist/axios.min.js"></script>*@
+    @*<script src='https://unpkg.com/v-calendar'></script>*@
+
+    <script src="~/js/admin/trailers.js"></script>
+}

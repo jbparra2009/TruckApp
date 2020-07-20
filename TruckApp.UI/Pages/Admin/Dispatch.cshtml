@@ -1,0 +1,43 @@
+﻿@page
+@model TruckApp.UI.Pages.Admin.DispatchModel
+@{
+}
+
+    <div id="app">
+        <div>
+            <p v-for="(dispatch, index) in dispatches">
+                {{dispatch.firstName}} {{dispatch.lastName}} - {{dispatch.email}} - {{dispatch.description}}
+                <a @@click="editDispatch(dispatch.id, index)">Edit</a>
+                <a @@click="deleteDispatch(dispatch.id, index)">Remove</a>
+            </p>
+        </div>
+
+        <div>
+            <input v-model="dispatchModel.firstName" />
+            <input v-model="dispatchModel.lastName" />
+            <input v-model="dispatchModel.email" />
+            <input v-model="dispatchModel.phone1" />
+            <input v-model="dispatchModel.address1" />
+            <input v-model="dispatchModel.city" />
+            <input v-model="dispatchModel.state" />
+            <input v-model="dispatchModel.zipCode" />
+            <input v-model="dispatchModel.description" />
+            <input v-model="dispatchModel.ss" />
+            <input v-model="dispatchModel.corpName" />
+            <input v-model="dispatchModel.ein" />
+            <input v-model.number="dispatchModel.rate" />
+            <input v-model="dispatchModel.status" />
+
+            <button @@click="createDispatch" v-if="!dispatchModel.id">Create Dispatch</button>
+            <button @@click="updateDispatch" v-else>Update Dispatch</button>
+        </div>
+    </div>
+
+
+@section scripts{
+    @*<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>*@
+    @*<script src="https://unpkg.com/axios/dist/axios.min.js"></script>*@
+
+    <script src="~/js/admin/dispatches.js"></script>
+}
+
