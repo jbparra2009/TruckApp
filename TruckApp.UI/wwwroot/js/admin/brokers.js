@@ -6,15 +6,15 @@
         objectIndex: 0,
         brokerModel: {
             id: 0,
-            brokerName: "BrokerName",
-            email: "Email",
-            phone1: "Phone1",
-            address1: "Address",
-            city: "City",
-            state: "State",
-            zipCode: "ZipCode",
-            description: "Description",
-            status: "Status"
+            brokerName: '',
+            email: '',
+            phone1: '',
+            address1: '',
+            city: '',
+            state: '',
+            zipCode: '',
+            description: '',
+            status: 'Active'
         },
         brokers: []
     },

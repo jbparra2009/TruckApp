@@ -111,7 +111,7 @@ namespace TruckApp.UI.Controllers
         public IActionResult GetFactories() => Ok(new GetFactories(_ctx).Do());
 
         [HttpGet("factories/{id}")]
-        public IActionResult GetFactory(int id) => Ok(new GetFactory(_ctx).Do(id));
+        public IActionResult GetFactory(int id) =>  Ok(new GetFactory(_ctx).Do(id));
 
         [HttpPost("factories")]
         public async Task<IActionResult> CreateFactory([FromBody] CreateFactory.Request request) => Ok(await new CreateFactory(_ctx).Do(request));

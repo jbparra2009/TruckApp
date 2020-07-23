@@ -6,14 +6,14 @@
         objectIndex: 0,
         factoryModel: {
             id: 0,
-            name: 'Name',
-            email: 'Email',
-            phone1: 'Phone',
-            address1: 'Address',
-            city: 'City',
-            state: 'State',
-            zipCode: 'ZipCode',
-            description: 'Description',
+            name: '',
+            email: '',
+            phone1: '',
+            address1: '',
+            city: '',
+            state: '',
+            zipCode: '',
+            description: '',
             rate: 1.00,
             status: 'Active'
         },
@@ -25,7 +25,7 @@
     methods: {
         getFactory(id) {
             this.loading = true;
-            axios.get('/Admin/factories/ + id')
+            axios.get('/Admin/factories/' + id)
                 .then(res => {
                     console.log(res);
                     var factory = res.data;
@@ -38,11 +38,8 @@
                         city: factory.city,
                         state: factory.state,
                         zipCode: factory.zipCode,
-
                         description: factory.description,
                         rate: factory.rate,
-
-                        created: factory.created,
                         status: factory.status
                     };
                 })
@@ -79,6 +76,21 @@
                 })
                 .then(() => {
                     this.loading = false;
+                });
+        },
+        updateFactory() {
+            this.loading = true;
+            axios.put('/Admin/factories', this.factoryModel)
+                .then(res => {
+                    console.log(res.data);
+                    this.factories.splice(this.objectIndex, 1, res.data);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+                .then(() => {
+                    this.loading = false;
+                    this.editing = false;
                 });
         },
         deleteFactory(id, index) {

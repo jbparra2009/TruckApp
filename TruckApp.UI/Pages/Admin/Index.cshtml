@@ -3,7 +3,42 @@
 @{
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>JBP - Truck Application 2020 - Admin Panel</a>.</p>
-</div>
+    <div class="text-center">
+        <label for="name">Your Name</label>
+        <input class="name" type="text" placeholder="First Name" />
+        <br />
+        <label for="name">Account ID</label>
+        <input class="account" type="text" placeholder="Account ID" />
+        <br />
+        <label for="name">Amount of Dollars to Donate</label>
+        <input class="donation" type="text" placeholder="100" />
+        <br />
+        <label for="name">Phone</label>
+        <input class="phone" type="text" placeholder="1 999 999-9999" />
+        <br />
+        <label for="name">Credit Card</label>
+        <input class="creditcard" type="text" placeholder="Credit Card" />
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-amex"></i>
+
+        <button>Submit</button>
+
+
+
+        @*<h1 class="display-4">Welcome</h1>
+        <p>JBP - Truck Application 2020 - Admin Panel</a>.</p>*@
+    </div>
+
+@section scripts{
+    @*<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>*@
+    @*<script src="https://unpkg.com/axios/dist/axios.min.js"></script>*@
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>*@
+    @*<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>*@
+
+    <script src="~/js/admin/dispatches.js"></script>
+    <script src="~/js/cleave/cleave.js"></script>
+    <script src="~/js/cleave/addons/cleave-phone.us.js"></script>
+    <script src="~/js/mask.js"></script>
+
+}

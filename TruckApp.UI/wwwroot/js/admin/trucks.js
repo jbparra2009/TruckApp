@@ -6,28 +6,28 @@
         objectIndex: 0,
         truckModel: {
             id: 0,
-            vin: 'VIN',
-            year: 'Year',
-            make: 'Make',
-            type: 'Type',
-            class: 'Class',
-            bodyType: 'BodyType',
-            lenght: 'Lenght',
-            description: 'Description',
+            vin: '',
+            year: '',
+            make: '',
+            type: '',
+            class: '',
+            bodyType: '',
+            lenght: '',
+            description: '',
 
-            truckPlate: 'TruckPlate',
-            truckNumber: 'TruckNumber',
+            truckPlate: '',
+            truckNumber: '',
 
-            registrantName: 'RegistrantName',
-            titleState: 'TitleState',
-            ownerLessorName: 'OwnerLessorName',
+            registrantName: '',
+            titleState: '',
+            ownerLessorName: '',
             expiresDate: '2010-01-31',
             efectiveDate: '2010-01-31',
             issueDate: '2010-01-31',
             purchasePrice: 10000.00,
             purchaseDate: '2010-01-31',
 
-            status: 'Status'
+            status: 'Active'
         },
         trucks: []
     },
