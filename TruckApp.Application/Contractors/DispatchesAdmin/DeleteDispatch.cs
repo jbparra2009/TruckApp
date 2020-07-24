@@ -15,8 +15,8 @@ namespace TruckApp.Application.Contractors.DispatchesAdmin
 
         public async Task<bool> Do(int id)
         {
-            var Dispatch = _ctx.Dispatches.FirstOrDefault(x => x.Id == id);
-            _ctx.Dispatches.Remove(Dispatch);
+            var dispatch = _ctx.Dispatches.FirstOrDefault(x => x.Id == id);
+            _ctx.Dispatches.Remove(dispatch);
 
             await _ctx.SaveChangesAsync();
 

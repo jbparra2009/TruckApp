@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using TruckApp.Application.Contractors.Brokers;
 using TruckApp.Database;
 
-namespace TruckApp.UI.Pages.Admin
+namespace TruckApp.UI.Pages.Admin.Pages
 {
     public class BrokerModel : PageModel
     {

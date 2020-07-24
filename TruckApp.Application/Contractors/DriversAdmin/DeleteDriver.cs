@@ -15,8 +15,8 @@ namespace TruckApp.Application.Contractors.DriversAdmin
 
         public async Task<bool> Do(int id)
         {
-            var Driver = _ctx.Drivers.FirstOrDefault(x => x.Id == id);
-            _ctx.Drivers.Remove(Driver);
+            var driver = _ctx.Drivers.FirstOrDefault(x => x.Id == id);
+            _ctx.Drivers.Remove(driver);
             await _ctx.SaveChangesAsync();
 
             return true;

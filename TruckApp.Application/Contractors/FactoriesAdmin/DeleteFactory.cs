@@ -16,8 +16,8 @@ namespace TruckApp.Application.Contractors.FactoriesAdmin
 
         public async Task<bool> Do(int id)
         {
-            var Factory = _ctx.Factories.FirstOrDefault(x => x.Id == id);
-            _ctx.Factories.Remove(Factory);
+            var factory = _ctx.Factories.FirstOrDefault(x => x.Id == id);
+            _ctx.Factories.Remove(factory);
             await _ctx.SaveChangesAsync();
 
             return true;

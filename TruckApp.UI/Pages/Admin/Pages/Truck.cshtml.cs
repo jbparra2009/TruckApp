@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using TruckApp.Application.Assets.Trucks;
 using TruckApp.Database;
 
-namespace TruckApp.UI.Pages.Admin
+namespace TruckApp.UI.Pages.Admin.Pages
 {
     public class TruckModel : PageModel
     {

@@ -15,8 +15,8 @@ namespace TruckApp.Application.Contractors.BrokersAdmin
 
         public async Task<bool> Do(int id)
         {
-            var Broker = _ctx.Brokers.FirstOrDefault(x => x.Id == id);
-            _ctx.Brokers.Remove(Broker);
+            var broker = _ctx.Brokers.FirstOrDefault(x => x.Id == id);
+            _ctx.Brokers.Remove(broker);
 
             await _ctx.SaveChangesAsync();
 
