@@ -6,15 +6,15 @@
         objectIndex: 0,
         brokerModel: {
             id: 0,
-            brokerName: '',
-            email: '',
-            phone1: '',
-            address1: '',
-            city: '',
-            state: '',
-            zipCode: '',
-            description: '',
-            status: 'Active'
+            brokerName: "Name",
+            email: "Email",
+            phone1: "Phone",
+            address1: "Address1",
+            city: "City",
+            state: "State",
+            zipCode: "ZipCode",
+            description: "Description",
+            status: "Active"
         },
         brokers: []
     },
@@ -77,6 +77,7 @@
                 })
                 .then(() => {
                     this.loading = false;
+                    this.editing = false;
                 });
         },
         updateBroker() {

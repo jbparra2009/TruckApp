@@ -6,28 +6,28 @@
         objectIndex: 0,
         truckModel: {
             id: 0,
-            vin: '',
-            year: '',
-            make: '',
-            type: '',
-            class: '',
-            bodyType: '',
-            lenght: '',
-            description: '',
+            vin: "1FUJGLDR8DSBU5416",
+            year: "2010",
+            make: "FRHT",
+            type: "Type",
+            class: "Class",
+            bodyType: "Body Type",
+            lenght: "Lenght",
+            description: "Description",
 
-            truckPlate: '',
-            truckNumber: '',
+            truckPlate: "Truck Plate",
+            truckNumber: "Truck Number",
 
-            registrantName: '',
-            titleState: '',
-            ownerLessorName: '',
-            expiresDate: '2010-01-31',
-            efectiveDate: '2010-01-31',
-            issueDate: '2010-01-31',
+            registrantName: "Registrant Name",
+            titleState: "Title State",
+            ownerLessorName: "Owner Lessor Name",
+            expiresDate: "2010-01-31",
+            efectiveDate: "2010-01-31",
+            issueDate: "2010-01-31",
             purchasePrice: 10000.00,
-            purchaseDate: '2010-01-31',
+            purchaseDate: "2010-01-31",
 
-            status: 'Active'
+            status: "Active"
         },
         trucks: []
     },
@@ -97,6 +97,7 @@
                 })
                 .then(() => {
                     this.loading = false;
+                    this.editing = false;
                 });
         },
         updateTruck() {

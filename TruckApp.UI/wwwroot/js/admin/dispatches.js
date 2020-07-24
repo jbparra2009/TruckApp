@@ -6,20 +6,20 @@
         objectIndex: 0,
         dispatchModel: {
             id: 0,
-            firstName: 'FirstName',
-            lastName: 'LastName',
-            email: 'Email',
-            phone1: 'Phone',
-            address1: 'Address',
-            city: 'City',
-            state: 'State',
-            zipCode: 'ZipCode',
-            description: 'Description',
-            ss: 'SS',
-            corpName: 'CorpName',
-            ein: 'EIN',
+            firstName: "FirstName",
+            lastName: "LastName",
+            email: "Email",
+            phone1: "Phone",
+            address1: "Address",
+            city: "City",
+            state: "State",
+            zipCode: "ZipCode",
+            description: "Description",
+            ss: "SS",
+            corpName: "CorpName",
+            ein: "EIN",
             rate: 1.00,
-            status: 'Active'
+            status: "Active"
         },
         dispatches: []
     },
@@ -85,6 +85,7 @@
                 })
                 .then(() => {
                     this.loading = false;
+                    this.editing = false;
                 });
         },
         updateDispatch() {

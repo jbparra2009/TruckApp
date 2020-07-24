@@ -6,16 +6,16 @@
         objectIndex: 0,
         factoryModel: {
             id: 0,
-            name: '',
-            email: '',
-            phone1: '',
-            address1: '',
-            city: '',
-            state: '',
-            zipCode: '',
-            description: '',
+            name: "Name",
+            email: "Email",
+            phone1: "Phone",
+            address1: "Address",
+            city: "City",
+            state: "State",
+            zipCode: "ZipCode",
+            description: "Description",
             rate: 1.00,
-            status: 'Active'
+            status: "Active"
         },
         factories: []
     },
@@ -76,6 +76,7 @@
                 })
                 .then(() => {
                     this.loading = false;
+                    this.editing = false;
                 });
         },
         updateFactory() {

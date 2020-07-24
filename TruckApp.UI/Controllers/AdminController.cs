@@ -31,10 +31,10 @@ namespace TruckApp.UI.Controllers
         [HttpPost("trailers")]
         public async Task<IActionResult> CreateTrailer([FromBody] CreateTrailer.Request request) => Ok(await new CreateTrailer(_ctx).Do(request));
 
-        [HttpDelete("trailes/{id}")]
+        [HttpDelete("trailers/{id}")]
         public async Task<IActionResult> DeleteTrailer(int id) => Ok(await new DeleteTrailer(_ctx).Do(id));
 
-        [HttpPut("trailes")]
+        [HttpPut("trailers")]
         public async Task<IActionResult> UpdateTrailer([FromBody] UpdateTrailer.Request request) => Ok(await new UpdateTrailer(_ctx).Do(request));
 
         // Truck Controllers

@@ -9,7 +9,6 @@
             <div class="tabs-container">
                 <ul class="nav nav-tabs">
                     <li><a class="nav-link active" data-toggle="tab" href="#tab-1">Dispatch info</a></li>
-                    <li><a class="nav-link" data-toggle="tab" href="#tab-2"> Data</a></li>
                 </ul>
                 <div class="tab-content">
                     <div id="tab-1" class="tab-pane active">
@@ -34,52 +33,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Email:</label>
-                                    <div class="col-sm-10">
-                                        <input v-model="dispatchModel.email" type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Phone:</label>
-                                    <div class="col-sm-10">
-                                        <input v-model="dispatchModel.phone1" type="text" class="form-control" />
-                                        <small class="form-text">(999) 999-9999</small>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Rate:</label>
                                     <div class="col-sm-10">
                                         <input v-model.number="dispatchModel.rate" type="number" class="form-control">
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div id="tab-2" class="tab-pane">
-                        <div class="panel-body">
-                            <fieldset>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Address:</label>
-                                    <div class="col-sm-10">
-                                        <input v-model="dispatchModel.address1" type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">city:</label>
-                                    <div class="col-sm-10">
-                                        <input v-model="dispatchModel.city" type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">state:</label>
-                                    <div class="col-sm-10">
-                                        <input v-model="dispatchModel.state" type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">zipCode:</label>
-                                    <div class="col-sm-10">
-                                        <input v-model="dispatchModel.zipCode" type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -117,11 +73,8 @@
                         <thead>
                             <tr>
                                 <th data-toggle="true">Dispatch Name</th>
-                                <th data-hide="phone">Email</th>
                                 <th data-hide="all">Description</th>
-                                <th data-hide="phone">Phone</th>
                                 <th data-hide="phone">Created</th>
-                                <th data-hide="phone,tablet">State</th>
                                 <th data-hide="phone">Status</th>
                                 <th class="text-right" data-sort-ignore="true">Action</th>
 
@@ -133,19 +86,10 @@
                                     {{dispatch.firstName}} {{dispatch.lastName}}
                                 </td>
                                 <td>
-                                    {{dispatch.email}}
-                                </td>
-                                <td>
                                     {{dispatch.description}}
                                 </td>
                                 <td>
-                                    {{dispatch.phone1}}
-                                </td>
-                                <td>
                                     {{dispatch.created}}
-                                </td>
-                                <td>
-                                    {{dispatch.state}}
                                 </td>
                                 <td>
                                     <span class="label label-primary">{{dispatch.status}}</span>

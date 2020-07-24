@@ -6,28 +6,28 @@
         objectIndex: 0,
         driverModel: {
             id: 0,
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone1: '',
-            address1: '',
-            city: '',
-            state: '',
-            zipCode: '',
-            description: '',
+            firstName: "FirstName",
+            lastName: "LastName",
+            email: "Email",
+            phone1: "Phone",
+            address1: "Address",
+            city: "City",
+            state: "State",
+            zipCode: "ZipCode",
+            description: "Description",
 
             rate: 1.00,
-            corpName: '',
-            ein: '',
+            corpName: "CorpName",
+            ein: "EIN",
             
-            ss: '',
-            dob: '',
-            cdlClass: '',
-            cdlIssued: '',
-            cdlExpires: '',
-            cdlState: '',
+            ss: "SS",
+            dob: "2010-01-01",
+            cdlClass: "CdlClass",
+            cdlIssued: "2010-01-01",
+            cdlExpires: "2010-01-01",
+            cdlState: "CdlState",
 
-            status: 'Active'
+            status: "Active"
         },
         drivers: []
     },
@@ -102,6 +102,7 @@
                 })
                 .then(() => {
                     this.loading = false;
+                    this.editing = false;
                 });
         },
         updateDriver() {

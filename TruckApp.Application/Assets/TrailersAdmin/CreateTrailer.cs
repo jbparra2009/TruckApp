@@ -29,16 +29,11 @@ namespace TruckApp.Application.Assets.TrailersAdmin
                 TrailerPlate = request.TrailerPlate,
                 TrailerNumber = request.TrailerNumber,
                 TitleNumber = request.TitleNumber,
-                TitleState = request.TitleState,
-                
+                TitleState = request.TitleState,               
                 TitleIssueDate = DateTime.Parse(request.TitleIssueDate),
                 PurchasePrice = request.PurchasePrice,
                 PurchaseDate = DateTime.Parse(request.PurchaseDate),
                 Status = request.Status,
-
-                //TitleIssueDate = DateTime.ParseExact(request.TitleIssueDate, "yyyy-MM-dd HH:mm tt", System.Globalization.CultureInfo.InvariantCulture),
-                //TitleIssueDate = DateTime.ParseExact(request.TitleIssueDate, "yyyy-MM-dd HH:mm tt", null),
-                //DateTime oDate = DateTime.ParseExact(iString, "yyyy-MM-dd HH:mm tt", System.Globalization.CultureInfo.InvariantCulture);
             };
 
             _ctx.Trailers.Add(trailer);
@@ -64,6 +59,7 @@ namespace TruckApp.Application.Assets.TrailersAdmin
                 PurchasePrice = trailer.PurchasePrice,
                 PurchaseDate = trailer.PurchaseDate.ToString("yyyy-MM-dd"),
                 Status = trailer.Status,
+
             };
         }
 
