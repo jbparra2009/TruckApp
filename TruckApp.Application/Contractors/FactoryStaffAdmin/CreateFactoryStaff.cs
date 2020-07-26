@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using TruckApp.Database;
 using TruckApp.Domain.Models;
 
@@ -20,11 +19,10 @@ namespace TruckApp.Application.Contractors.FactoryStaffAdmin
             {
                 FirstName = request.FirstName,
                 LastName = request.LastName,
-                Email = request.LastName,
+                Email = request.Email,
                 Phone1 = request.Phone1,
                 Fax1 = request.Fax1,
                 Description = request.Description,
-                Created = DateTime.Parse(request.Created),
 
                 FactoryId = request.FactoryId,
             };
@@ -38,7 +36,7 @@ namespace TruckApp.Application.Contractors.FactoryStaffAdmin
                 Id = factoryStaff.Id,
                 FirstName = factoryStaff.FirstName,
                 LastName = factoryStaff.LastName,
-                Email = factoryStaff.LastName,
+                Email = factoryStaff.Email,
                 Phone1 = factoryStaff.Phone1,
                 Fax1 = factoryStaff.Fax1,
                 Description = factoryStaff.Description,
@@ -57,7 +55,7 @@ namespace TruckApp.Application.Contractors.FactoryStaffAdmin
             public string Fax1 { get; set; }
 
             public string Description { get; set; }
-            public string Created { get; set; }
+
         }
 
         public class Response

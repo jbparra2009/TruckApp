@@ -3,9 +3,11 @@ using System.Threading.Tasks;
 using TruckApp.Application.Assets.TrailersAdmin;
 using TruckApp.Application.Assets.TrucksAdmin;
 using TruckApp.Application.Contractors.BrokersAdmin;
+using TruckApp.Application.Contractors.BrokerStaffAdmin;
 using TruckApp.Application.Contractors.DispatchesAdmin;
 using TruckApp.Application.Contractors.DriversAdmin;
 using TruckApp.Application.Contractors.FactoriesAdmin;
+using TruckApp.Application.Contractors.FactoryStaffAdmin;
 using TruckApp.Database;
 
 namespace TruckApp.UI.Controllers
@@ -121,6 +123,34 @@ namespace TruckApp.UI.Controllers
 
         [HttpPut("factories")]
         public async Task<IActionResult> UpdateFactory([FromBody] UpdateFactory.Request request) => Ok(await new UpdateFactory(_ctx).Do(request));
+
+        // BrokerStaff Controllers
+
+        [HttpGet("brokersStaff")]
+        public IActionResult GetBrokerStaff() => Ok(new GetBrokerStaff(_ctx).Do());
+
+        [HttpPost("brokersStaff")]
+        public async Task<IActionResult> CreateBrokerStaff([FromBody] CreateBrokerStaff.Request request) => Ok(await new CreateBrokerStaff(_ctx).Do(request));
+
+        [HttpDelete("brokersStaff/{id}")]
+        public async Task<IActionResult> DeleteBrokerStaff(int id) => Ok(await new DeleteBrokerStaff(_ctx).Do(id));
+
+        [HttpPut("brokersStaff")]
+        public async Task<IActionResult> UpdateBrokerStaff([FromBody] UpdateBrokerStaff.Request request) => Ok(await new UpdateBrokerStaff(_ctx).Do(request));
+
+        // FatoryStaff Controllers
+
+        [HttpGet("factoriesStaff")]
+        public IActionResult GetFactoryStaff() => Ok(new GetFactoryStaff(_ctx).Do());
+
+        [HttpPost("factoriesStaff")]
+        public async Task<IActionResult> CreateFactoryStaff([FromBody] CreateFactoryStaff.Request request) => Ok(await new CreateFactoryStaff(_ctx).Do(request));
+
+        [HttpDelete("factoriesStaff/{id}")]
+        public async Task<IActionResult> DeleteFactoryStaff(int id) => Ok(await new DeleteFactoryStaff(_ctx).Do(id));
+
+        [HttpPut("factoriesStaff")]
+        public async Task<IActionResult> UpdateFactoryStaff([FromBody] UpdateFactoryStaff.Request request) => Ok(await new UpdateFactoryStaff(_ctx).Do(request));
 
     }
 }

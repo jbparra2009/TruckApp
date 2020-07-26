@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using TruckApp.Database;
 using TruckApp.Domain.Models;
 
@@ -20,11 +19,10 @@ namespace TruckApp.Application.Contractors.BrokerStaffAdmin
             {
                 FirstName = request.FirstName,
                 LastName = request.LastName,
-                Email = request.LastName,
+                Email = request.Email,
                 Phone1 = request.Phone1,
                 Fax1 = request.Fax1,
                 Description = request.Description,
-                Created = DateTime.Parse(request.Created),
 
                 BrokerId = request.BrokerId,
             };
@@ -38,7 +36,7 @@ namespace TruckApp.Application.Contractors.BrokerStaffAdmin
                 Id = brokerStaff.Id,
                 FirstName = brokerStaff.FirstName,
                 LastName = brokerStaff.LastName,
-                Email = brokerStaff.LastName,
+                Email = brokerStaff.Email,
                 Phone1 = brokerStaff.Phone1,
                 Fax1 = brokerStaff.Fax1,
                 Description = brokerStaff.Description,
@@ -58,7 +56,6 @@ namespace TruckApp.Application.Contractors.BrokerStaffAdmin
             public string Fax1 { get; set; }
 
             public string Description { get; set; }
-            public string Created { get; set; } 
         }
 
         public class Response

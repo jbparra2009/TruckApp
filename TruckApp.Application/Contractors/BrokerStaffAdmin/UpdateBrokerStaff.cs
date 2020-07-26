@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using TruckApp.Database;
 using TruckApp.Domain.Models;
@@ -32,7 +29,7 @@ namespace TruckApp.Application.Contractors.BrokerStaffAdmin
                     Phone1 = brokerStaff.Phone1,
                     Fax1 = brokerStaff.Fax1,
                     Description = brokerStaff.Description,
-                    Created = DateTime.Parse(brokerStaff.Created),
+                    //Created = DateTime.Parse(brokerStaff.Created),
                     BrokerId = brokerStaff.BrokerId,
                 });
             }
@@ -59,7 +56,7 @@ namespace TruckApp.Application.Contractors.BrokerStaffAdmin
             public string Fax1 { get; set; }
 
             public string Description { get; set; }
-            public string Created { get; set; }
+            //public string Created { get; set; }
         }
 
         public class Request
