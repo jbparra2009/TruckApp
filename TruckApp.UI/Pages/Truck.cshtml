@@ -1,0 +1,47 @@
+﻿@page "{truckNumber}"
+@model TruckApp.UI.Pages.TruckModel
+@{
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Trailer Detail</h2>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>Truck Detail</h5>
+                </div>
+                <div class="ibox-content">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>TruckNumber</th>
+                                <th>TruckPlate</th>
+                                <th>Description</th>
+                                <th>VIN</th>
+                                <th>Year</th>
+                                <th>Make</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Model.Truck.TruckNumber</td>
+                                <td>@Model.Truck.TruckPlate</td>
+                                <td>@Model.Truck.Description</td>
+                                <td>@Model.Truck.VIN</td>
+                                <td>@Model.Truck.Year</td>
+                                <td>@Model.Truck.Make</td>
+                                <td>@Model.Truck.Status</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

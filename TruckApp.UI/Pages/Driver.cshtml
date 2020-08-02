@@ -1,0 +1,59 @@
+﻿@page "{firstName}"
+@model TruckApp.UI.Pages.DriverModel
+@{
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Driver Detail</h2>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>Driver Detail</h5>
+                </div>
+                <div class="ibox-content">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>FirstName</th>
+                                <th>LastName</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>ZipCode</th>
+                                <th>Description</th>
+                                <th>CorpName</th>
+                                <th>EIN</th>
+                                <th>Rate</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Model.Driver.FirstName</td>
+                                <td>@Model.Driver.LastName</td>
+                                <td>@Model.Driver.Email</td>
+                                <td>@Model.Driver.Phone1</td>
+                                <td>@Model.Driver.Address1</td>
+                                <td>@Model.Driver.City</td>
+                                <td>@Model.Driver.State</td>
+                                <td>@Model.Driver.ZipCode</td>
+                                <td>@Model.Driver.Description</td>
+                                <td>@Model.Driver.CorpName</td>
+                                <td>@Model.Driver.EIN</td>
+                                <td>@Model.Driver.Rate</td>
+                                <td>@Model.Driver.Status</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

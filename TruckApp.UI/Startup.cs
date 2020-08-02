@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using TruckApp.Database;
 
 namespace TruckApp.UI
@@ -23,6 +24,12 @@ namespace TruckApp.UI
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
 
             services.AddRazorPages();
+
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = "LoadCart";
+                options.Cookie.MaxAge = TimeSpan.FromDays(365);
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -43,6 +50,8 @@ namespace TruckApp.UI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

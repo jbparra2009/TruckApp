@@ -1,0 +1,61 @@
+﻿@page "{firstName}"
+@model TruckApp.UI.Pages.DispatchModel
+@{
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Driver Detail</h2>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>Driver Detail</h5>
+                </div>
+                <div class="ibox-content">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>FirstName</th>
+                                <th>LastName</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>ZipCode</th>
+                                <th>Description</th>
+                                <th>SS</th>
+                                <th>CorpName</th>
+                                <th>EIN</th>
+                                <th>Rate</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Model.Dispatch.FirstName</td>
+                                <td>@Model.Dispatch.LastName</td>
+                                <td>@Model.Dispatch.Email</td>
+                                <td>@Model.Dispatch.Phone1</td>
+                                <td>@Model.Dispatch.Address1</td>
+                                <td>@Model.Dispatch.City</td>
+                                <td>@Model.Dispatch.State</td>
+                                <td>@Model.Dispatch.ZipCode</td>
+                                <td>@Model.Dispatch.Description</td>
+                                <td>@Model.Dispatch.SS</td>
+                                <td>@Model.Dispatch.CorpName</td>
+                                <td>@Model.Dispatch.EIN</td>
+                                <td>@Model.Dispatch.Rate</td>
+                                <td>@Model.Dispatch.Status</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

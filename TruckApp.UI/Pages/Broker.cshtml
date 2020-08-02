@@ -1,0 +1,118 @@
+﻿@page "{brokerName}"
+
+@model TruckApp.UI.Pages.BrokerModel
+@{
+}
+
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>Broker Staff Detail</h2>
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>Broker Detail</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Address</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>ZipCode</th>
+                                    <th>Description</th>
+                                    <th>Created</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Model.Broker.BrokerName</td>
+                                    <td>@Model.Broker.Email</td>
+                                    <td>@Model.Broker.Phone1</td>
+                                    <td>@Model.Broker.Address1</td>
+                                    <td>@Model.Broker.City</td>
+                                    <td>@Model.Broker.State</td>
+                                    <td>@Model.Broker.ZipCode</td>
+                                    <td>@Model.Broker.Description</td>
+                                    <td>@Model.Broker.Created</td>
+                                    <td>@Model.Broker.Status</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>Broker Staff Detail</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    foreach (var s in Model.Broker.BrokerStaff)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @s.FirstName @s.LastName
+                                            </td>
+                                            <td>
+                                                @s.Email
+                                            </td>
+                                            <td>
+                                                @s.Phone1
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        @*<h2>Broker Detail Page</h2>*@
+
+        @*<div>
+            <p>@Model.Broker.BrokerName</p>
+            <p>@Model.Broker.Email</p>
+            <p>@Model.Broker.Description</p>
+            <div>
+                <label>Broker Staff</label>
+                <div>
+                    @{
+                        foreach (var s in Model.Broker.BrokerStaff)
+                        {
+                            <p>@s.FirstName @s.LastName</p>
+                            <br />
+                        }
+                    }
+                </div>
+                <select>
+                    @foreach (var s in Model.Broker.BrokerStaff)
+                    {
+                        <option value="@s.Id">@s.FirstName  @s.LastName.</option>
+                    }
+                </select>
+            </div>
+        </div>*@

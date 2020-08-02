@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
+﻿using System.Linq;
 using TruckApp.Database;
 
 namespace TruckApp.Application.Contractors.DriversAdmin
@@ -16,7 +13,9 @@ namespace TruckApp.Application.Contractors.DriversAdmin
         }
 
         public DriverViewModel Do(int id) =>
-            _ctx.Drivers.Where(x => x.Id == id).Select(x => new DriverViewModel
+            _ctx.Drivers
+            .Where(x => x.Id == id)
+            .Select(x => new DriverViewModel
             {
                 Id = x.Id,
                 FirstName = x.FirstName,

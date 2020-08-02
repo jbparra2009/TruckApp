@@ -23,8 +23,12 @@ namespace TruckApp.Application.Contractors.Brokers
                 City = x.City,
                 State = x.State,
                 ZipCode = x.ZipCode,
+
                 Description = x.Description,
+
+                Created = x.Created.ToString("yyyy-MM-dd"),
                 Status = x.Status,
+
             });
 
         public class BrokerViewModel
@@ -39,6 +43,7 @@ namespace TruckApp.Application.Contractors.Brokers
 
             public string Description { get; set; }
 
+            public string Created { get; set; }
             public string Status { get; set; } // Active, Standby, Deleted.
         }
     }   
